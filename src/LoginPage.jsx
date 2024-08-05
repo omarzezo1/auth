@@ -20,6 +20,7 @@ const LoginPage = () => {
       })
       .then(res => res.json())
       .then(data=> localStorage.setItem("token", data.token));
+      window.location = "/profile"
     }
 
   return (
@@ -31,7 +32,6 @@ const LoginPage = () => {
         <input className="p-3 bg-green-700 cursor-pointer text-white" type="submit" value={"Login"}/>
        </form>
       </div>
-      <Link className="block w-fit mt-5 rounded-md mx-auto py-3 px-5 text-xl font-semibold bg-red-800 text-white" to="/profile">Profile Page</Link>
     </>
   )
 }
